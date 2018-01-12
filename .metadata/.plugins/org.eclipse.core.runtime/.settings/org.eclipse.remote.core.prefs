@@ -1,0 +1,6 @@
+connections/org.eclipse.cdt.arduino.core.connectionType/uno/arduinoBoardName=uno
+connections/org.eclipse.cdt.arduino.core.connectionType/uno/arduinoPackageName=arduino
+connections/org.eclipse.cdt.arduino.core.connectionType/uno/arduinoPlatformName=avr
+connections/org.eclipse.cdt.arduino.core.connectionType/uno/arduinoPortName=COM4
+connections/org.eclipse.cdt.arduino.core.connectionType/uno/programmer=avrisp
+eclipse.preferences.version=1
