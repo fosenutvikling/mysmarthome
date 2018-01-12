@@ -1,2 +1,2 @@
-.sc4040464292193553953.o: \
- C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemWorkspace\LightSensorWithLed\.sc4040464292193553953.cpp
+.sc4880144482502585370.o: \
+ C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemRepo\LightSensorWithLed\.sc4880144482502585370.cpp

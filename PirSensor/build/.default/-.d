@@ -1,2 +1,2 @@
-.sc8093035226542531588.o: \
- C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemWorkspace\PirSensor\.sc8093035226542531588.cpp
+.sc6243314925089634421.o: \
+ C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemRepo\PirSensor\.sc6243314925089634421.cpp
