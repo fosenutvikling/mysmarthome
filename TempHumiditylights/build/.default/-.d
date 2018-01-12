@@ -1,2 +1,2 @@
-.sc9024326080129626155.o: \
- C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemRepo\TempHumiditylights\.sc9024326080129626155.cpp
+.sc2050209440711375635.o: \
+ C:\Users\jakob\Documents\Skole\Bachelor\MittSmartHjem\Repository\TempHumiditylights\.sc2050209440711375635.cpp

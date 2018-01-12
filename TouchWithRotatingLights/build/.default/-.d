@@ -1,2 +1,2 @@
-.sc4468592362920172468.o: \
- C:\Bachelor\ MittSmartHjem\Repo\MittSmartHjemRepo\TouchWithRotatingLights\.sc4468592362920172468.cpp
+.sc2431116491444067364.o: \
+ C:\Users\jakob\Documents\Skole\Bachelor\MittSmartHjem\Repository\TouchWithRotatingLights\.sc2431116491444067364.cpp
