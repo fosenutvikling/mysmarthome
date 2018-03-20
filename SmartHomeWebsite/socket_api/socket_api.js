@@ -4,7 +4,6 @@ var socketApi = {};
 
 socketApi.io = io;
 
-
 /*io.on('connection', function (socket){
   socket.on('CH01', function (from, msg) {
     console.log('MSG', from, msg);
@@ -20,7 +19,7 @@ io.on('connection', function (socket){ // Socket connection
     if (msg.Topic === "temp") { // If topic is temperature
     console.log('MSG', from, msg);
     socket.emit('CH01', 'SERVER: Message Recieved with the Topic: ' + msg.Topic); // msg is a JSON object, .Topic, .Date and .Data is available.
-    
+  
     } else if(msg.Topic === "humm") {
         if (msg.Data === NULL)
           console.log("No data available");
