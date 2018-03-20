@@ -48,7 +48,7 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1521556347736" expanded="true" signature="35919:35961" ph="..." />
+                <marker date="1521556823605" expanded="true" signature="35948:35990" ph="..." />
               </folding>
             </state>
           </provider>
@@ -317,7 +317,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -389,7 +388,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521556347736" expanded="true" signature="35919:35961" ph="..." />
+            <marker date="1521556823605" expanded="true" signature="35948:35990" ph="..." />
           </folding>
         </state>
       </provider>
@@ -623,7 +622,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521556347736" expanded="true" signature="35919:35961" ph="..." />
+            <marker date="1521556823605" expanded="true" signature="35948:35990" ph="..." />
           </folding>
         </state>
       </provider>
