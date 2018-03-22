@@ -2,6 +2,7 @@
 var io = require('socket.io-client');
 var socket = io.connect("http://192.168.1.142:8080", {reconnect: true}); // Change to remote host when not on local comp
 const sqlite3 = require("sqlite3").verbose();
+const fs = require("fs");
 
 // Add a connect listener
 socket.on('connect', function (socket) {
@@ -53,13 +54,19 @@ let sql = 'SELECT * FROM DHT22_Temperature_Data WHERE ID = (Select MAX(ID) FROM 
     throw err;
   }
   rows.forEach((row) => {
+// Read content of the RaspberryID file to find the given ID of this raspberry.
+        fs.readFile("/home/pi/MySmartHome/RaspberryID", (err, data) => {
+          if (err) throw err;
+            var fileContent = data.toString("utf8");
+// Set the variables and keys to send as JSON to the server.
 	var topic = "temp";
 	var id = row.SensorID;
 	var date = row.Date_n_Time;
 	var data = row.Temperature;
 	var msg = { "Topic":topic, "SensorID":id, "Date":date, "Data":data };
-
+// Emit message.
    socket.emit("CH01", "Rasperry Pi:", msg);
+   });
   });
 });
 
