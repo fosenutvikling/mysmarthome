@@ -1,0 +1,22 @@
+<% include layout.ejs %>
+<body>
+  <div class="container">
+    <div class="row main">
+      <div class="main-login main-center">
+        <form method="post" action="/linkrasp" class="form-horizontal">
+          <div class="form-group">
+            <label for="raspberry" class="cols-sm-2 control-label">Link user to SmartHome gateway</label>
+            <div class="cols-sm-10">
+              <div class="input-group"><span class="input-group-addon"><i aria-hidden="true" class="fa fa-users fa"></i></span>
+                <input id="raspberry" type="text" name="raspberry" placeholder="Enter your gateways id" class="form-control"/>
+              </div>
+            </div>
+          </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+</body>
