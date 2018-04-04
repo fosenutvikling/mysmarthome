@@ -1,0 +1,24 @@
+<% include layout.ejs %>
+
+<body>
+  <section class="home">
+    <h2>Sensors</h2>
+      <table>
+       <% if(sensor.length){
+          for(var i=0; i<sensor.length; i++) { %>
+            <tr>
+              <td><%=sensor[i].sensor_name%></td> 
+              <td>
+                <a class="a-inside choose" href="sensors/<%=sensor[i].sensor_id%>">Choose</a>
+              </td>
+            </tr>
+        <%}
+        }else{ %>
+          <tr>
+            <td colspan="3">No sensors registered</td>
+          </tr>
+        <% } %>
+      </table>
+    </section>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+</body>

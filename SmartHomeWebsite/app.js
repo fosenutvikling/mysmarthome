@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var htmlEngine = require('consolidate');
+
+//Session handling for users
+var session = require('express-session');
 
 // routing pages
 var index = require('./routes/index');
@@ -13,15 +15,25 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.engine('html', htmlEngine.swig);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Memory storage - not optimal for production
+//Expand: create session storage in database
+var store = new session.MemoryStore;
+app.use(session({
+	secret: 'max', 
+	saveUninitalized: true,
+	resave: true,
+	cookie: {secure: !true},
+	store: store
+}));
 
 app.use('/', index);
 app.use('/users', users);
