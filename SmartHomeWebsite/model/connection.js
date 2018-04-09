@@ -16,11 +16,13 @@ connection.connect(function(err) {
  *For later: sensor_id = primary key therefore it is unique and multiple instances of it is not allowed in db table - problematic
  *connection.query("SELECT * FROM tbl_sensor WHERE sensor_id = '" + sensorId +"' AND rasp_id = '" + raspId +"'"
  */
-function sensor_query(sensorId, payload, raspId ){
-  connection.query("SELECT sensor_id FROM tbl_sensor WHERE sensor_name = '" + sensorId +"'", function(err, res, field){
+function sensor_query(sensorName, payload, raspId ){
+  connection.query("SELECT sensor_id FROM tbl_sensor WHERE sensor_name = '" + sensorName +"'", function(err, res, field){
     if(res.length <= 0)
-      connection.query("INSERT INTO tbl_sensor (sensor_name, rasp_id) VALUES ('" + sensorId + "', '" + raspId + "')");
-    connection.query("INSERT INTO tbl_sensor_data (sensor_name, data) VALUES ('" + sensorId + "', '" + payload + "')");
+      connection.query("INSERT INTO tbl_sensor (sensor_name, rasp_id) VALUES ('" + sensorName + "', '" + raspId + "')");
+    connection.query("SELECT sensor_id FROM tbl_sensor WHERE sensor_name = '" + sensorName +"' AND rasp_id = '" + raspId +"'", function(error, result){
+      connection.query("INSERT INTO tbl_sensor_data (sensor_id, sensor_name, data) VALUES ('" + result[0].sensor_id + "', '" + sensorName + "', '" + payload + "')");
+    })
   })
 };
 

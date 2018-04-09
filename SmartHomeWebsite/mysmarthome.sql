@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: 01. Apr, 2018 08:02 a.m.
--- Server-versjon: 10.1.19-MariaDB
--- PHP Version: 5.6.28
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `mysmarthome`
 --
@@ -31,6 +13,20 @@ CREATE TABLE `tbl_raspberry` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dataark for tabell `tbl_raspberry`
+--
+
+INSERT INTO `tbl_raspberry` (`rasp_id`, `user_id`) VALUES
+('admin', 2),
+('kirra', 2),
+('poiu', 2),
+('Rasp', 2),
+('Raspid1', 2),
+('raspmartin', 2),
+('years', 2),
+('qwerty', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +39,17 @@ CREATE TABLE `tbl_sensor` (
   `rasp_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dataark for tabell `tbl_sensor`
+--
+
+INSERT INTO `tbl_sensor` (`sensor_id`, `sensor_name`, `rasp_id`) VALUES
+(1, 'Soverom', 'raspmartin'),
+(2, 'Stue', 'raspmartin'),
+(3, 'Entree', 'raspmartin'),
+(4, 'Baderom', 'raspmartin'),
+(6, 'KritiskKristian', 'Raspid1');
+
 -- --------------------------------------------------------
 
 --
@@ -51,9 +58,20 @@ CREATE TABLE `tbl_sensor` (
 
 CREATE TABLE `tbl_sensor_data` (
   `sensor_id` int(11) NOT NULL,
+  `sensor_name` varchar(255) NOT NULL,
   `data` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dataark for tabell `tbl_sensor_data`
+--
+
+INSERT INTO `tbl_sensor_data` (`sensor_id`, `sensor_name`, `data`, `timestamp`) VALUES
+(1, '', '22.3', '2018-04-01 04:33:56'),
+(2, '', '24.3', '2018-04-01 04:34:10'),
+(3, '', '15.3', '2018-04-01 04:34:17'),
+(4, '', '18', '2018-04-01 04:34:29');
 
 -- --------------------------------------------------------
 
@@ -66,6 +84,21 @@ CREATE TABLE `tbl_users` (
   `name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dataark for tabell `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`user_id`, `name`, `password`) VALUES
+(2, 'admin', 'admin'),
+(3, 'yess', 'yess'),
+(4, 'yess', 'yess'),
+(5, 'jau', 'yess'),
+(6, 'test', 'test'),
+(7, 'kiel', 'dar'),
+(8, 'yre', 'er'),
+(9, 'yreea', 'er'),
+(10, 'iyu', 'uy');
 
 --
 -- Indexes for dumped tables
@@ -105,7 +138,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_sensor`
 --
 ALTER TABLE `tbl_sensor`
-  MODIFY `sensor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `sensor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --

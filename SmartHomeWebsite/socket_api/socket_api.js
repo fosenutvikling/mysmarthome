@@ -11,7 +11,7 @@ io.on('connection', function (socket){ // Socket connection
   socket.on('CH01', function (from, msg) { // Listen on channel CH01 and write what is sent from the client.
     if (msg.Topic === "temp") { // If topic is temperature
     //console.log('MSG', from, msg);
-    //db.sensor_query(msg.SensorID.toString(), msg.Data.toString(), msg.RaspberryID.toString());
+    db.sensor_query(msg.SensorID.toString(), msg.Data.toString(), msg.RaspberryID.toString());
     socket.emit('CH01', 'SERVER: Message Recieved with the Topic: ' + msg.Topic); // msg is a JSON object, .Topic, .Date and .Data is available.
     } else if(msg.Topic === "humm") {
         if (msg.Data === NULL)
@@ -24,5 +24,6 @@ io.on('connection', function (socket){ // Socket connection
   });
 
 });
+
 
 module.exports = socketApi;
