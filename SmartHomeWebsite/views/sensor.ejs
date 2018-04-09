@@ -8,14 +8,12 @@
           for(var i=0; i<sensor.length; i++) { %>
             <tr>
               <td><%=sensor[i].sensor_name%></td>
-              <td>
-                <a class="a-inside choose" href="/sensors/sensor/<%=sensor[i].sensor_id%>">Choose</a>
-              </td>
+              <td><%=sensor[i].data%></td>
             </tr>
         <%}
         }else{ %>
           <tr>
-            <td colspan="3">No sensors registered</td>
+            <td colspan="3">No data on sensor</td>
           </tr>
         <% } %>
       </table>

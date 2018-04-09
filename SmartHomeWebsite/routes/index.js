@@ -6,7 +6,7 @@ var db = require('../model/connection');
 //expanding: use cookies instead of global variables
 var sess;
 
-// Set Route for Home 
+// Set Route for Home
 router.get('/', function(req, res, next) {
   res.render('index');
 });
@@ -37,12 +37,14 @@ router.get('/sensors', function(req, res){
 	});
 })
 //Display chosen sensors data
-router.get('sensors/:id', function(req, res){
-	db.connection.query("SELECT * FROM tbl_sensor_data WHERE sensor_id = ?", [req.params.id], function(err, res){
+router.get('/sensors/sensor/:id', function(req, res){
+  console.log(req.params.id);
+	db.connection.query("SELECT * FROM tbl_sensor_data WHERE sensor_id = ?", [req.params.id], function(err, rows){
 		if(err)
-			throw err;
-		res.render('sensors/:id')
-	})
+      console.log("Error querrying db: %s", err);
+      //throw err;
+		res.render('sensor', {sensor: rows});
+	});
 })
 
 //expanding: Handling validation - username/email
@@ -77,7 +79,7 @@ router.post('/linkrasp', function(req, res){
 		if(err)
 			throw err;
 		//store gateway in session for sensor table
-		sess.gateway = req.body.raspberry;	
+		sess.gateway = req.body.raspberry;
 	});
 	res.redirect('./');
 });
