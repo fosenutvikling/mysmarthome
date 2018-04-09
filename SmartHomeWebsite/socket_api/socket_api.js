@@ -4,7 +4,6 @@ var socketApi = {};
 var db = require("../model/connection");
 socketApi.io = io;
 
-
 io.on('connection', function (socket){ // Socket connection
    console.log('connection'); // If connection successful, print.
    socket.emit("CH01", "Connecting to the server"); // Trigger message to start the listener on the client side.
@@ -13,6 +12,9 @@ io.on('connection', function (socket){ // Socket connection
     //console.log('MSG', from, msg);
     db.sensor_query(msg.SensorID.toString(), msg.Data.toString(), msg.RaspberryID.toString());
     socket.emit('CH01', 'SERVER: Message Recieved with the Topic: ' + msg.Topic); // msg is a JSON object, .Topic, .Date and .Data is available.
+
+    //socket.disconnect(true);
+
     } else if(msg.Topic === "humm") {
         if (msg.Data === NULL)
           console.log("No data available");

@@ -5,6 +5,7 @@ var router = express.Router();
 var db = require('../model/connection');
 //expanding: use cookies instead of global variables
 var sess;
+
 // Set Route for Home 
 router.get('/', function(req, res, next) {
   res.render('index');
