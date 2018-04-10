@@ -38,7 +38,7 @@ router.get('/sensors', function(req, res){
 })
 //Display chosen sensors data
 router.get('/sensors/sensor/:id', function(req, res){
-  console.log(req.params.id);
+  
 	db.connection.query("SELECT * FROM tbl_sensor_data WHERE sensor_id = ?", [req.params.id], function(err, rows){
 		if(err)
       console.log("Error querrying db: %s", err);

@@ -2,12 +2,11 @@
 
 <body>
   <section class="home">
-    <h2>Sensors</h2>
-      <table>
-       <% if(sensor.length){
-          for(var i=0; i<sensor.length; i++) { %>
+    <% if(sensor.length){%>
+      <h2><%=sensor[0].sensor_name%></h2>
+         <%for(var i=0; i<sensor.length; i++) { %>
+          <table>
             <tr>
-              <td><%=sensor[i].sensor_name%></td>
               <td><%=sensor[i].data%></td>
             </tr>
         <%}
