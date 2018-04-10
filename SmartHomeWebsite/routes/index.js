@@ -43,7 +43,7 @@ router.get('/sensors/sensor/:id', function(req, res){
       console.log("Error querrying db: %s", err);
       //throw err;
 		res.render('sensor', {sensor: rows});
-	}); 
+	});
 })
 
 //expanding: Handling validation - username/email
