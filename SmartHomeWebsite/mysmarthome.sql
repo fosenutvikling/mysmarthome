@@ -48,7 +48,9 @@ INSERT INTO `tbl_sensor` (`sensor_id`, `sensor_name`, `rasp_id`) VALUES
 (2, 'Stue', 'raspmartin'),
 (3, 'Entree', 'raspmartin'),
 (4, 'Baderom', 'raspmartin'),
-(6, 'KritiskKristian', 'Raspid1');
+(6, 'KritiskKristian', 'Raspid1'),
+(7, 'Kontor', 'Raspid1'),
+(8, 'Kontor1', 'Raspid1');
 
 -- --------------------------------------------------------
 
@@ -59,6 +61,7 @@ INSERT INTO `tbl_sensor` (`sensor_id`, `sensor_name`, `rasp_id`) VALUES
 CREATE TABLE `tbl_sensor_data` (
   `sensor_id` int(11) NOT NULL,
   `sensor_name` varchar(255) NOT NULL,
+  `topic` varchar(255) NOT NULL,
   `data` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -67,11 +70,11 @@ CREATE TABLE `tbl_sensor_data` (
 -- Dataark for tabell `tbl_sensor_data`
 --
 
-INSERT INTO `tbl_sensor_data` (`sensor_id`, `sensor_name`, `data`, `timestamp`) VALUES
-(1, '', '22.3', '2018-04-01 04:33:56'),
-(2, '', '24.3', '2018-04-01 04:34:10'),
-(3, '', '15.3', '2018-04-01 04:34:17'),
-(4, '', '18', '2018-04-01 04:34:29');
+INSERT INTO `tbl_sensor_data` (`sensor_id`, `sensor_name`, `topic`, `data`, `timestamp`) VALUES
+(1, '', '', '22.3', '2018-04-01 04:33:56'),
+(2, '', '', '24.3', '2018-04-01 04:34:10'),
+(3, '', '', '15.3', '2018-04-01 04:34:17'),
+(4, '', '', '18', '2018-04-01 04:34:29');
 
 -- --------------------------------------------------------
 
@@ -138,7 +141,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_sensor`
 --
 ALTER TABLE `tbl_sensor`
-  MODIFY `sensor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `sensor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
