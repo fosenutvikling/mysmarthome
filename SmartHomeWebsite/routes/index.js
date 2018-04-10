@@ -30,7 +30,7 @@ router.get('/linkrasp', function(req, res) {
 
 // in query '"+sess.gateway+"'
 router.get('/sensors', function(req, res){
-	db.connection.query("SELECT sensor_id, sensor_name FROM tbl_sensor WHERE rasp_id = 'raspmartin'", function(err, rows){
+	db.connection.query("SELECT sensor_id, sensor_name FROM tbl_sensor WHERE rasp_id = 'Raspid1'", function(err, rows){
 		if(err)
 			console.log("Error selecting: %s", err);
 		res.render('sensors', {sensor: rows});
@@ -38,8 +38,7 @@ router.get('/sensors', function(req, res){
 })
 //Display chosen sensors data
 router.get('/sensors/sensor/:id', function(req, res){
-  
-	db.connection.query("SELECT * FROM tbl_sensor_data WHERE sensor_id = ?", [req.params.id], function(err, rows){
+  	db.connection.query("SELECT * FROM tbl_sensor_data WHERE sensor_id = ? ORDER BY timestamp DESC LIMIT 1", [req.params.id], function(err, rows){
 		if(err)
       console.log("Error querrying db: %s", err);
       //throw err;
