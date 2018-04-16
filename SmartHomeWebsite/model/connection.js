@@ -13,16 +13,13 @@ connection.connect(function(err) {
 
 /**Function that uploads data from sensor to server db.
  *Checks if sensor already exists and is connected to a rasp id(PK -> FK), otherwise create that db connection and upload sensor data table
- *For later: sensor_id = primary key therefore it is unique and multiple instances of it is not allowed in db table - problematic
- *connection.query("SELECT * FROM tbl_sensor WHERE sensor_id = '" + sensorId +"' AND rasp_id = '" + raspId +"'"
  */
 function sensor_query(sensorName, payload, raspId, sTopic){
+  //Get sensor id from sensor that passed its data
   connection.query("SELECT sensor_id FROM tbl_sensor WHERE sensor_name = '" + sensorName +"'", function(err, res, field){
     if(res.length <= 0)
-      connection.query("INSERT INTO tbl_sensor (sensor_name, rasp_id) VALUES ('" + sensorName + "', '" + raspId + "')");
-    connection.query("SELECT sensor_id FROM tbl_sensor WHERE sensor_name = '" + sensorName +"' AND rasp_id = '" + raspId +"'", function(error, result){
-      connection.query("INSERT INTO tbl_sensor_data (sensor_id, sensor_name, data, topic) VALUES ('" + result[0].sensor_id + "', '" + sensorName + "', '" + payload + "', '" + sTopic +"')");
-    })
+      connection.query("INSERT INTO tbl_sensor (sensor_name, rasp_id) VALUES ('" + sensorName + "', '" + raspId + "')");    //Add sensor data to table
+    connection.query("INSERT INTO tbl_sensor_data (sensor_id, sensor_name, data, topic) VALUES ('" + res[0].sensor_id + "', '" + sensorName + "', '" + payload + "', '" + sTopic +"')");
   })
 };
 

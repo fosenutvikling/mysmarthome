@@ -8,7 +8,6 @@ io.on('connect', function (socket){ // Socket connection
 	var sessionid = socket.id; // Store the ID of the connected client.
 	console.log(sessionid);
    console.log('connection'); // If connection successful, print.
-
    socket.emit("CH01", "Connecting to the server"); // Trigger message to start the listener on the client side.
    socket.emit("CH02", "Channel 2"); // Trigger for channel 2 humidity
 
