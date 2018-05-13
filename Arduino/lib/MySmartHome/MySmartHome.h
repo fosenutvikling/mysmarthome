@@ -3,6 +3,9 @@
  *
  *  Created on: 9. feb. 2018
  *      Author: Stian
+ *API references:
+ *https://github.com/tzapu/WiFiManager/wiki/API-reference
+ *https://pubsubclient.knolleary.net/api.html
  */
 
 #ifndef MYSMARTHOME_H_
