@@ -6,6 +6,9 @@
  *API references:
  *https://github.com/tzapu/WiFiManager/wiki/API-reference
  *https://pubsubclient.knolleary.net/api.html
+ *Inspiration:
+ *https://www.baldengineer.com/mqtt-tutorial.html
+ *
  */
 
 #ifndef MYSMARTHOME_H_
