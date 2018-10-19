@@ -1,0 +1,6 @@
+../build/
+*/build/
+.metadata
+node_modules
+.idea
+.settings

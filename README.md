@@ -60,6 +60,7 @@ SmartHomeWebsite/mysmarthome.sql
 
 MittSmartHjem/MySmartHome.sh
 - This is a bash script to autoinstall all needed software and scripts for the raspberry to become a gateway. This is not yet tested due to us having only one Raspberry Pi and will not take the risk ruining it. The plan is to make the script automatically create the filesystem needed for the other scripts to run without problems. It will also download all the needed software and updates when it comes to the MQTT server and VNC service for costumer service. It does not contain the code needed to download the scrips automatially from the bitbucket, but this will be added when Fosen Utvikling makes this to an Open Source project.
+
 # Future work #
 This is the beginning of a Open Source project which in turn means there is a lot to be done. There is a possibility to add more sensors like, touch, light and sound. The project has made the gateway and
 webserver ready to send and recieve new sensors, but the schematics have not yet been developed.
