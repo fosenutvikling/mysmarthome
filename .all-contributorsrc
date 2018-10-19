@@ -1,0 +1,60 @@
+{
+  "projectName": "mysmarthome",
+  "projectOwner": "fosenutvikling",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 7,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors)",
+  "contributors": [
+    {
+      "login": "mpukstad",
+      "name": "mpukstad",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/40139628?v=4",
+      "profile": "https://github.com/mpukstad",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "infra"
+      ]
+    },
+    {
+      "login": "Sfenstad91",
+      "name": "sfenstad91",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/40124762?v=4",
+      "profile": "https://github.com/Sfenstad91",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "infra"
+      ]
+    },
+    {
+      "login": "KristianSundhaugen",
+      "name": "Kristian Sundhaugen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16637372?v=4",
+      "profile": "https://github.com/KristianSundhaugen",
+      "contributions": [
+        "code",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "Totalbug92",
+      "name": "totalbug92",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/32250965?v=4",
+      "profile": "https://github.com/Totalbug92",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    }
+  ]
+}

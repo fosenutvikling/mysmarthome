@@ -1,0 +1,27 @@
+{
+  "name": "mysmarthome",
+  "version": "0.0.1",
+  "description": "Bachelor's thesis by students at NTNU",
+  "devDependencies": {
+    "all-contributors-cli": "^5.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fosenutvikling/mysmarthome.git"
+  },
+  "keywords": [
+    "arduino",
+    "raspberry-pi",
+    "smarthome",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fosenutvikling/mysmarthome/issues"
+  },
+  "homepage": "https://github.com/fosenutvikling/mysmarthome#readme"
+}
